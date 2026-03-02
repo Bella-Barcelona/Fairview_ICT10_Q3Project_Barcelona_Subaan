@@ -32,7 +32,7 @@ def GET_TEAM(e):
     Med = str(document.getElementById("Medic").value)
     Sec = str(document.getElementById("Section").value)
     Lev = str(document.getElementById("Grade").value)
-    localStorage.setItem("section", Sec)
+    localStorage.setItem("section", Sec) #Used to store something specific inside the localStorage
 
     if Reg == "yes":#first if condition is to check if you are registered, most important
         if Med == "yes":
@@ -101,7 +101,7 @@ def GET_TEAM(e):
 
 def PLAYER(e):
 
-    Sec = localStorage.getItem("section")
+    Sec = localStorage.getItem("section")  #used in retriving the stored item from the local storage
 
     if Sec == "":
         players = "Please go to the previous page and get a team"
